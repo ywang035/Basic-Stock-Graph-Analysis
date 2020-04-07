@@ -12,8 +12,8 @@ parser.add_argument('-t','--ticker', help='enter ticker in CAP, AAPL for Apple I
 parser.add_argument('-it','--interval', help='default=daily, Alternative: <WEEKLY>', required=False)
 parser.add_argument('-sd','--start-date', help='date format: yyyy-mm-dd', required=False)
 parser.add_argument('-ed', '--end-date', help='date format: yyyy-mm-dd', required=False)
-parser.add_argument('-d', '--draw', help='default=BASIC, input example: <MACD,RSI,SMA>, available graph: <BASIC, SMA, EMA, MACD, RSI, JBBAND, STO_SLOW>', required=False)
-parser.add_argument('-ts', '--trade-strategy', help='input example: <SMA_CROSS,MACD_CROSS>, available graph: <BUY_HOLD, SMA_CROSS, MACD_CROSS>', required=False)
+parser.add_argument('-d', '--draw', help='input example: <MACD,RSI,SMA>, available graph: <BASIC, SMA, EMA, MACD, RSI, JBBAND, STO_SLOW>', required=False)
+parser.add_argument('-ts', '--trade-strategy', help='input example: <SMA_CROSS,MACD_CROSS>, available strategies: <BUY_HOLD, SMA_CROSS, MACD_CROSS>', required=False)
 args = parser.parse_args()
 
 

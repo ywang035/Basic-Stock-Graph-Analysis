@@ -22,8 +22,7 @@ def calculation(dataset):
     dataset['MACD'], dataset['MACD_Signal'], dataset['MACD_Hist'] = talib.MACD(np.asarray(dataset['Close']),
                                                                                fastperiod=12, slowperiod=26,
                                                                                signalperiod=9)
-    dataset['OBV'] = talib.OBV(np.asarray(dataset['Close']), np.asarray(dataset['Volume']))
+    dataset['OBV'] = talib.OBV(np.asarray(dataset['Close']), np.asarray(dataset['Volume'], dtype='float'))
     dataset['STO_SLOW_K'], dataset['STO_SLOW_D'] = talib.STOCH(np.asarray(dataset['High']), np.asarray(dataset['Low']), np.asarray(dataset['Close']), fastk_period=5, slowk_period=3, slowk_matype=0, slowd_period=3,
                          slowd_matype=0)
     return dataset
-
